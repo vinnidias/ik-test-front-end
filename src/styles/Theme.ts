@@ -3,5 +3,6 @@ export const Theme = {
     mainBg: "#f2f2f2",
     secondaryBg: "#ff7210",
     lightYellow: "#FFE461",
+    smoothGray: "#dbdbdb"
   },
 };
