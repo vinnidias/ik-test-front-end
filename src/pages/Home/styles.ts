@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Theme } from "../../styles/Theme";
-import { Link as RouterLink} from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -90,6 +90,10 @@ export const Item = styled.li`
     font-weight: 600;
     word-spacing: 0.2rem;
     color: ${Theme.colors.secondaryBg};
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   span {
@@ -130,13 +134,13 @@ export const Link = styled(RouterLink)`
   min-width: 220px;
   height: fit-content;
   text-align: center;
-  padding: .8em;
+  padding: 0.8em;
   border-radius: 5px;
   background-color: ${Theme.colors.secondaryBg};
-  transition: .4s;
+  transition: 0.4s;
   box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.1);
 
-  :hover{
-    transform: scale(.96);
+  :hover {
+    transform: scale(0.96);
   }
-`
+`;

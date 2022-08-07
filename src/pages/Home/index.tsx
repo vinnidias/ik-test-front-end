@@ -42,8 +42,6 @@ export const Home: React.FC = () => {
     })();
   }, []);
 
-  console.log(tasks);
-
   return (
     <S.Container>
       {tasks.length > 0 && taskModalIsOpen.open && (
@@ -70,7 +68,7 @@ export const Home: React.FC = () => {
               onClick={() => setTaskModalIsOpen({ open: true, index })}
             >
               <strong>{item.name}</strong>
-              <span className="title">{item.title}</span>
+              <p className="title">{item.title}</p>
               <p>
                 <BsFillCalendarMonthFill />{" "}
                 <input type="date" value={item.date} disabled />
