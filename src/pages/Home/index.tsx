@@ -1,34 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BsFillCalendarMonthFill, BsFillClockFill } from "react-icons/bs";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { apiClient } from "../../services/apiClient";
+import { TasksContext } from "../../contexts/TasksContext";
 
 import * as S from "./styles";
 import { Theme } from "../../styles/Theme";
 import { TaskModal } from "../../components/TaskModal";
-
-type Task = {
-  id: string;
-  name: string;
-  title: string;
-  description: string;
-  date: string;
-  hour: string;
-  created_at: Date;
-  updated_at?: Date;
-};
-
-type IsOpenProps = {
-  open: boolean;
-  index: number;
-};
+import { Header } from "../../components/Header";
 
 export const Home: React.FC = () => {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [taskModalIsOpen, setTaskModalIsOpen] = useState<IsOpenProps>({
-    open: false,
-    index: 0,
-  });
+  const { tasks, setTasks, taskData, setTaskData }: any =
+    useContext(TasksContext);
+
+  const [taskModalIsOpen, setTaskModalIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     (async () => {
@@ -44,19 +31,10 @@ export const Home: React.FC = () => {
 
   return (
     <S.Container>
-      {tasks.length > 0 && taskModalIsOpen.open && (
-        <TaskModal
-          id={tasks[taskModalIsOpen.index].id}
-          name={tasks[taskModalIsOpen.index].name}
-          title={tasks[taskModalIsOpen.index].title}
-          description={tasks[taskModalIsOpen.index].description}
-          date={tasks[taskModalIsOpen.index].date}
-          hour={tasks[taskModalIsOpen.index].hour}
-          created_at={tasks[taskModalIsOpen.index].created_at}
-          onCloseClick={() =>
-            setTaskModalIsOpen({ open: false, index: taskModalIsOpen.index })
-          }
-        />
+      <Header />
+      <ToastContainer position="top-center" autoClose={3000} />
+      {tasks.length > 0 && taskModalIsOpen && (
+        <TaskModal onCloseClick={() => setTaskModalIsOpen(false)} />
       )}
       <h1>Minha Agenda 📆</h1>
 
@@ -65,10 +43,13 @@ export const Home: React.FC = () => {
           return (
             <S.Item
               key={index}
-              onClick={() => setTaskModalIsOpen({ open: true, index })}
+              onClick={() => {
+                setTaskModalIsOpen(true);
+                setTaskData(item);
+              }}
             >
               <strong>{item.name}</strong>
-              <p className="title">{item.title}</p>
+              <span className="title">{item.title}</span>
               <p>
                 <BsFillCalendarMonthFill />{" "}
                 <input type="date" value={item.date} disabled />
