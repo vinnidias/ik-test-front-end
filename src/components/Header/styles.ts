@@ -12,11 +12,17 @@ export const Container = styled.header`
 
   .link {
     text-decoration: none;
+    cursor: pointer;
+    transition: .4s;
+
+    :hover {
+      opacity: .6;
+    }
   }
 
   strong {
     font-family: "Poppins", sans-serif;
-    color: #162c3b;
+    color: #000;
     letter-spacing: 1px;
   }
   span {

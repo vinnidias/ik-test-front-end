@@ -1,15 +1,14 @@
 import React from "react";
-import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
-import { BiHome } from "react-icons/bi";
-import { Container } from "./styles";
 import { Link } from "react-router-dom";
+import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
+
+import { Container } from "./styles";
 
 export const Header: React.FC = () => {
   return (
     <Container>
       <Link to="/" className="link">
         <strong>
-          <BiHome />
           Desafio
           <span>IK Tech</span>
         </strong>
