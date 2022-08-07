@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Desafio Front End IK Tech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado com ReactJS para integração com API em NodeJS. <br>
+Está hospedado na Vercel e pode ser acessado [CLICANDO AQUI](https://desafio-iktech.vercel.app/)! 
 
-## Available Scripts
+ Ou pode ser instalado para rodar localmente.
+  
+ ## Instalação e Execução
+ 
+ Para instalação: 
+  - clone esse repositório em um repositório local;
+  - no terminal navegue até o repositório ik-test-front-end e rode comando npm install para instalar todas as dependências necessárias;
+```bash
+npm install
+```
 
-In the project directory, you can run:
+Para execução:
 
-### `npm start`
+   - abra o terminal e navegue para o repositório ik-test-front-end;
+   - execute o comando npm start;
+   - aguarde até o projeto ser aberto e direcionado para um link no seu navegador padrão; 
+   - normalmente o projeto é executado no localhost3000 "http://localhost:3000";
+   - Pronto! O projeto está rodando localmente;
+```bash
+npm start
+``` 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Fluxo do APP
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   - A tela inicial possui uma lista com um card para cada compromisso;
+   - É possível ver os detalhes do compromisso clicando em um card; 
+   - Ao clicar no card um modal aparece com os detalhes e os botões para edição e exclusão do compromisso;
+   - Na parte inferior possui um botão para cadastrar um novo compromisso e levará para tela de cadastro; 
+   - Na tela de cadastro é possível criar um compromisso inserindo todos os campos do formulário e clicando em cadastrar;
+   - É possível voltar a tela inicial clicando na texto no canto superior esquerdo no header ou clicando em voltar no navegador.
+   
+## Bibliotecas e tecnologias
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - [ReactJs](https://reactjs.org/)
+  - [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
+  - [styled-components](https://styled-components.com/)
+  - [axios](https://axios-http.com/ptbr/docs/intro)
+  - [react-icons](https://react-icons.github.io/react-icons/)
+  - [react-toastify](https://fkhadra.github.io/react-toastify/introduction)
+  - [Vercel](https://vercel.com/)
