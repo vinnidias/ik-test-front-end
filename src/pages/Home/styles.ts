@@ -90,10 +90,12 @@ export const Item = styled.li`
     font-weight: 600;
     word-spacing: 0.2rem;
     color: ${Theme.colors.secondaryBg};
-    max-width: 15ch;
+    
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 20ch;
+    justify-self: flex-end;
   }
 
   span {
@@ -123,6 +125,19 @@ export const Item = styled.li`
 
     box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.1);
     background-color: ${Theme.colors.smoothGray};
+
+    .title {
+    text-align: end;
+    font-weight: 600;
+    word-spacing: 0.2rem;
+    color: ${Theme.colors.secondaryBg};
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 10ch;
+    justify-self: flex-end;
+  }
   }
 `;
 
