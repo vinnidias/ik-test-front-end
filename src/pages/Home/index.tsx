@@ -24,7 +24,7 @@ export const Home: React.FC = () => {
         const res = req.data;
         setTasks([...res]);
       } catch (error) {
-        console.log("request fail: ", error);
+        toast.error("Problemas no servidor, tente mais tarde!")
       }
     })();
   }, []);
