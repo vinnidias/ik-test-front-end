@@ -22,8 +22,6 @@ export const TaskModal: React.FC<Props> = (props) => {
   const { taskData, setTaskData, setTasks }: any = useContext(TasksContext);
   const [editable, setEditable] = useState(false);
 
-  console.log(editable);
-
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     try {
