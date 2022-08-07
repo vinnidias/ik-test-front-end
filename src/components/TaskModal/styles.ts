@@ -22,6 +22,7 @@ export const Modal = styled.div`
   width: 100%;
   height: 100%;
   padding: 1em 0;
+  max-width: 700px;
 
   border-radius: 10px;
   margin: 0 auto;
@@ -29,8 +30,9 @@ export const Modal = styled.div`
 
   .close {
     position: absolute;
+    background: none;
     right: 1.2em;
-    top: 1em;
+    top: 0.5em;
     cursor: pointer;
     font-size: 1.2em;
     transition: 0.4s;
@@ -42,6 +44,64 @@ export const Modal = styled.div`
 
   h2 {
     color: ${Theme.colors.secondaryBg};
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1em;
+    gap: 1.2em;
+
+    height: 100%;
+    width: 100%;
+
+    div {
+      display: flex;
+      position: relative;
+      gap: 2em;
+      width: 100%;
+      margin-bottom: 1.2em;
+
+      button {
+        width: 50%;
+        height: 3em;
+
+        background-color: ${Theme.colors.secondaryBg};
+        color: ${Theme.colors.mainBg};
+        font-size: 1em;
+        font-weight: 600;
+
+        border-radius: 5px;
+        box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.1);
+
+        cursor: pointer;
+        transition: 0.4s;
+
+        :hover {
+          opacity: 0.8;
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 60%;
+
+      border-radius: 5px;
+      border: 1px solid ${Theme.colors.smoothGray};
+      box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.1);
+
+      padding: 1.2em;
+      outline: none;
+
+      font-size: 1em;
+
+      ::placeholder {
+        color: ${Theme.colors.smoothGray};
+      }
+    }
   }
 `;
 
@@ -86,7 +146,7 @@ export const DateSection = styled.section`
 export const ButtonSection = styled.section`
   display: flex;
   justify-content: flex-end;
-  
+
   width: 95%;
   height: 10%;
 
@@ -104,7 +164,7 @@ export const ButtonSection = styled.section`
 
     border-radius: 5px;
     box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.1);
-    transition: .4s;
+    transition: 0.4s;
 
     :hover {
       transform: scale(1.1);
